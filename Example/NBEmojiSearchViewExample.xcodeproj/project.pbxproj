@@ -19,6 +19,7 @@
 		07A7684A1B2CBB4C005713A6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07A768491B2CBB4C005713A6 /* Images.xcassets */; };
 		07A7684D1B2CBB4C005713A6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07A7684B1B2CBB4C005713A6 /* LaunchScreen.xib */; };
 		07A768591B2CBB4C005713A6 /* NBEmojiSearchViewExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A768581B2CBB4C005713A6 /* NBEmojiSearchViewExampleTests.m */; };
+		51CABEC387E4ADF51E114F90 /* libPods-NBEmojiSearchViewExampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D107A2B798048529D3CAD24D /* libPods-NBEmojiSearchViewExampleTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,9 @@
 		07A768521B2CBB4C005713A6 /* NBEmojiSearchViewExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NBEmojiSearchViewExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07A768571B2CBB4C005713A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07A768581B2CBB4C005713A6 /* NBEmojiSearchViewExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NBEmojiSearchViewExampleTests.m; sourceTree = "<group>"; };
+		D107A2B798048529D3CAD24D /* libPods-NBEmojiSearchViewExampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NBEmojiSearchViewExampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFA6D3F4E1B9687C5090B253 /* Pods-NBEmojiSearchViewExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NBEmojiSearchViewExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NBEmojiSearchViewExampleTests/Pods-NBEmojiSearchViewExampleTests.release.xcconfig"; sourceTree = "<group>"; };
+		E010C8877BF13B836B73AB7B /* Pods-NBEmojiSearchViewExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NBEmojiSearchViewExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NBEmojiSearchViewExampleTests/Pods-NBEmojiSearchViewExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51CABEC387E4ADF51E114F90 /* libPods-NBEmojiSearchViewExampleTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +85,8 @@
 				07A7683B1B2CBB4C005713A6 /* NBEmojiSearchViewExample */,
 				07A768551B2CBB4C005713A6 /* NBEmojiSearchViewExampleTests */,
 				07A7683A1B2CBB4C005713A6 /* Products */,
+				BF5693B508B7D5D9B29B17E6 /* Pods */,
+				8C9D15690D2261DEB9F28A6D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -150,6 +157,23 @@
 			name = NBEmojiSearchView;
 			sourceTree = "<group>";
 		};
+		8C9D15690D2261DEB9F28A6D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D107A2B798048529D3CAD24D /* libPods-NBEmojiSearchViewExampleTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF5693B508B7D5D9B29B17E6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E010C8877BF13B836B73AB7B /* Pods-NBEmojiSearchViewExampleTests.debug.xcconfig */,
+				DFA6D3F4E1B9687C5090B253 /* Pods-NBEmojiSearchViewExampleTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -174,9 +198,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 07A7685F1B2CBB4C005713A6 /* Build configuration list for PBXNativeTarget "NBEmojiSearchViewExampleTests" */;
 			buildPhases = (
+				C4561F55C270729D5FEFDDC6 /* Check Pods Manifest.lock */,
 				07A7684E1B2CBB4C005713A6 /* Sources */,
 				07A7684F1B2CBB4C005713A6 /* Frameworks */,
 				07A768501B2CBB4C005713A6 /* Resources */,
+				2AC02ECC26E5BD83CC310A5E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -245,6 +271,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2AC02ECC26E5BD83CC310A5E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NBEmojiSearchViewExampleTests/Pods-NBEmojiSearchViewExampleTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C4561F55C270729D5FEFDDC6 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		07A768351B2CBB4C005713A6 /* Sources */ = {
@@ -403,6 +462,7 @@
 		};
 		07A768601B2CBB4C005713A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E010C8877BF13B836B73AB7B /* Pods-NBEmojiSearchViewExampleTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -422,6 +482,7 @@
 		};
 		07A768611B2CBB4C005713A6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFA6D3F4E1B9687C5090B253 /* Pods-NBEmojiSearchViewExampleTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (

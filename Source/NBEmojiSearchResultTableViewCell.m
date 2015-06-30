@@ -11,6 +11,7 @@
 - (void)setEmoji:(NBEmoji *)emoji
 {
     self.textLabel.text = [emoji description];
+    self.accessibilityLabel = emoji.name;
 }
 
 @end
