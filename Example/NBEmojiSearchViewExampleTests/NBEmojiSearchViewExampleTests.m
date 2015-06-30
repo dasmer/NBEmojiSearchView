@@ -9,12 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 #import <KIF/KIF.h>
-#import "NBEmojiSearchView.h"
 
 @interface NBEmojiSearchViewExampleTests : XCTestCase
-
-@property (weak, nonatomic) UITextField *textField;
-@property (nonatomic, strong) NBEmojiSearchView *emojiSearchView;
 
 @end
 
