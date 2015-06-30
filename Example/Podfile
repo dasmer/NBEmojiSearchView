@@ -1,0 +1,8 @@
+platform :ios, '7.0'
+
+target 'NBEmojiSearchViewExampleTests' do
+
+pod 'KIF'
+
+end
+

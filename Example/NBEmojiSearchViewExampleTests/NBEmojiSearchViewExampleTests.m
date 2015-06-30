@@ -2,12 +2,13 @@
 //  NBEmojiSearchViewExampleTests.m
 //  NBEmojiSearchViewExampleTests
 //
-//  Created by Neeraj Baid on 6/13/15.
-//  Copyright (c) 2015 Neeraj Baid. All rights reserved.
+//  Created by Dasmer Singh on 6/29/15.
+//  Copyright (c) 2015 Dasmer Singh. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
+#import <KIF/KIF.h>
 
 @interface NBEmojiSearchViewExampleTests : XCTestCase
 
@@ -15,26 +16,39 @@
 
 @implementation NBEmojiSearchViewExampleTests
 
-- (void)setUp {
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+-(void)testAutocompleteEmojiTypeFlow
+{
+    UIView *firstResponder = [self firstResponderInView:[[UIApplication sharedApplication] keyWindow]];
+    [tester enterTextIntoCurrentFirstResponder:@"I love to play :bask"];
+    UIView *basketballCell = [tester waitForTappableViewWithAccessibilityLabel:@"basketball"];
+    [basketballCell tap];
+    [tester expectView:firstResponder toContainText:@"I love to play 🏀 "];
+
+    [tester enterTextIntoCurrentFirstResponder:@"and :soc"];
+    UIView *soccerCell = [tester waitForTappableViewWithAccessibilityLabel:@"soccer"];
+    [soccerCell tap];
+    [tester expectView:firstResponder toContainText:@"I love to play 🏀 and ⚽ "];
 }
 
-- (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
-}
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    XCTAssert(YES, @"Pass");
-}
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
+#pragma mark - Internal
+
+- (UIView *)firstResponderInView:(UIView *)view;
+{
+    if (view.isFirstResponder) {
+        return view;
+    }
+
+    for (UIView *subView in view.subviews)
+    {
+        UIView *firstResponder = [self firstResponderInView:subView];
+
+        if (firstResponder) {
+            return firstResponder;
+        }
+    }
+    return nil;
 }
 
 @end
