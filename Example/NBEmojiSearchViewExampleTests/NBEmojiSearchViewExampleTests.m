@@ -20,12 +20,12 @@
 {
     UIView *firstResponder = [self firstResponderInView:[[UIApplication sharedApplication] keyWindow]];
     [tester enterTextIntoCurrentFirstResponder:@"I love to play :bask"];
-    [tester waitForViewWithAccessibilityLabel:@"basketball"];
+    [tester waitForTappableViewWithAccessibilityLabel:@"basketball"];
     [tester tapViewWithAccessibilityLabel:@"basketball"];
     [tester expectView:firstResponder toContainText:@"I love to play 🏀 "];
 
     [tester enterTextIntoCurrentFirstResponder:@"and :soc"];
-    [tester waitForViewWithAccessibilityLabel:@"soccer"];
+    [tester waitForTappableViewWithAccessibilityLabel:@"soccer"];
     [tester tapViewWithAccessibilityLabel:@"soccer"];
     [tester expectView:firstResponder toContainText:@"I love to play 🏀 and ⚽ "];
 }
